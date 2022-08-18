@@ -8,9 +8,6 @@ const showOnPage = function (text) {
    outputDiv.append(newParagraph)
  }
 
- showOnPage(cit93workdue)
- showOnPage(cit28workdue)
- showOnPage(cit58workdue)
  
 let currentday = 2
 let cit93workdue = true
