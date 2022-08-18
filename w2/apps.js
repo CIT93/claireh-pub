@@ -8,10 +8,15 @@ const showOnPage = function (text) {
    outputDiv.append(newParagraph)
  }
 
+ showOnPage('This output is based on the following global variable data')
+ showOnPage('Current Day (Mon = 1 tues = 2 wed = 3 thurs = 4 fri = 5)----->' + 'currentday')
+ showOnPage('Do I have anything due for JavaScript----->' + 'cit93workdue')
+ showOnPage('Do I have anything due for SQL?----->' + 'cit28workdue')
+ showOnPage('Do I have anything due for Ethical Hacking?----->' + 'cit58workdue')
  
-let currentday = 2
+let currentday = 3
 let cit93workdue = true
-let cit28workdue = true
+let cit28workdue = false
 let cit58workdue = false
 
 if(currentday === 2) {
