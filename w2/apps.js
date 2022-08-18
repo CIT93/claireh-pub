@@ -10,7 +10,7 @@ const showOnPage = function (text) {
 
  showOnPage('This output is based on the following global variable data')
  showOnPage('Current Day (Mon = 1 tues = 2 wed = 3 thurs = 4 fri = 5)----->' + 'currentday')
- showOnPage('Do I have anything due for JavaScript----->' + 'cit93workdue')
+ showOnPage('Do I have anything due for JavaScript?----->' + 'cit93workdue')
  showOnPage('Do I have anything due for SQL?----->' + 'cit28workdue')
  showOnPage('Do I have anything due for Ethical Hacking?----->' + 'cit58workdue')
  
@@ -46,5 +46,6 @@ if(currentday === 2) {
     let cit58workdue = false
     showOnPage('work on Javascript after work')
  }
- else 
+ else {
    showOnPage('do whatever you want')
+ }
