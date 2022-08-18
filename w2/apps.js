@@ -1,5 +1,6 @@
 //Question to be answered: Which homework should I work on today
 //let Mon = 1 tues = 2 wed = 3 thurs = 4 fri = 5
+
 const showOnPage = function (text) {
    let newParagraph = document.createElement("p")
    newParagraph.innerHTML = text
