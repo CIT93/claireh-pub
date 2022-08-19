@@ -10,9 +10,13 @@ const showOnPage = function (text) {
 
 
 let currentday = 3
-let cit93workdue = true
-let cit28workdue = true
+let cit93workdue = false
+let cit28workdue = false
 let cit58workdue = false
+let cit93timerequirement = 2
+let cit28timerequirement = 3
+let cit58timerequirement = 2
+let timeavailable = 5
 
 showOnPage('This output is based on the following global variable data')
 showOnPage('Current Day (Mon = 1 Tues = 2 Wed = 3 Thurs = 4 Fri = 5)----->' + currentday)
@@ -24,28 +28,22 @@ showOnPage('Do I have anything due for Ethical Hacking?----->' + cit58workdue)
 if(currentday === 2) {
    showOnPage('Today is a CIT58 Class day from 6pm-10pm. No homework needs to be done')
 } else if (cit28workdue && cit58workdue) {
-   let cit93workdue = false
-    currentday !== 2
+   let time = cit28timerequirement + cit58timerequirement - timeavailable
     showOnPage('Work on SQL and Ethical Hacking after work')
 } else if (cit58workdue && cit93workdue) {
-   let cit28workdue = false
-    currentday !== 2
+   let time = cit58timerequirement + cit93timerequirement - timeavailable
     showOnPage('Work on Ethical Hacking and JavaScript after work')
 } else if (cit93workdue && cit28workdue) {
-    let cit58workdue = false
-    currentday !== 2
+  let time = cit93timerequirement + cit28timerequirement - timeavailable
     showOnPage('Work on JavaScript and SQL after work')
 } else if (cit28workdue){ 
-    let cit58workdue = false
-    let cit93workdue = false
+   let time = cit28timerequirement - timeavailable
     showOnPage('Work on SQL after work')
  } else if (cit58workdue){
-    let cit93workdue = false
-    let cit28workdue = false
+   let time = cit58timerequirement - timeavailable
     showOnPage('Work on Ethical Hacking after work')
  } else if (cit93workdue) {
-    let cit28workdue = false
-    let cit58workdue = false
+   let time = cit93timerequirement - timeavailable
     showOnPage('Work on Javascript after work')
  }
  else {
