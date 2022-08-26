@@ -5,13 +5,13 @@ const showOnPage = function (text) {
     outputDiv.append(newParagraph)
   }
  
-  showOnPage('This output is based on my current class schedule. It will tell me which class to focus on, and how much time I should allocate.')
+  showOnPage('Which class should I focus on today?')
 
   let classday = function (classT) {
     if (classT === 2){
     showOnPage('<b>Today is Tuesday. You have class at 6pm. Leave your house by 5:15pm')
     } else {
-   showOnPage('<b>No in person class. Refer to homework assignment below.')
+   showOnPage('<b>No in person class. Refer to homework assignment above.')
     }
   }
   
