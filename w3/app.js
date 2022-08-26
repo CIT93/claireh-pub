@@ -5,7 +5,17 @@ const showOnPage = function (text) {
     outputDiv.append(newParagraph)
   }
  
-  showOnPage('This output is based on the question which class am I working on, and how much time do I need to invest')
+  showOnPage('This output is based on my current class schedule. It will tell me which class to focus on, and how much time I should allocate.')
+
+  let classday = function (classT) {
+    if (classT === 2){
+    showOnPage('<b>Today is Tuesday. You have class at 6pm. Leave your house by 5:15pm')
+    } else {
+   showOnPage('<b>No in person class. Refer to homework assignment below.')
+    }
+  }
+  
+  let dayofweek = classday(3)
 
 let homework = function (classnum, homeworktime) {
 let freetime = (4 - homeworktime)
@@ -22,14 +32,6 @@ showOnPage(homeworkcalc)
 
 showOnPage('If freetime is negative. Allocate additonal hours from Friday')
 
-let classday = function (classT) {
-  if (classT === 2){
-  showOnPage('<b>Today is Tuesday. You have class at 6pm. Leave your house by 5:15pm')
-  } else {
- showOnPage('<b>No in person class. Refer to homework assignment above.')
-  }
-}
 
-let dayofweek = classday(3)
 
 
