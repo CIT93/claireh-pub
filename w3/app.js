@@ -8,14 +8,11 @@ const showOnPage = function (text) {
   showOnPage('Which class should I focus on today?')
 
   let classday = function (classT) {
-    if (classT === 2){
-    showOnPage('<b>Today is Tuesday. You have class at 6pm. Leave your house by 5:15pm')
-    } else {
-   showOnPage('<b>No in person class. Refer to homework assignment above.')
+  classT = 2
+return ('<b>Today is Tuesday. You have class at 6pm. Leave your house by 5:15pm')
     }
-  }
-  
-  let dayofweek = classday(3)
+
+
 
 let homework = function (classnum, homeworktime) {
 let freetime = (4 - homeworktime)
