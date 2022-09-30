@@ -49,3 +49,17 @@ document
   .addEventListener("click", function (e) {
     e.target.textContent = "This Weeks Class is Complete";
   });
+
+  const renderClass = function (fall22, filters) {
+    const filterClass = fall22.filter(function(classInfo){
+        return classInfo.classTitle.toLowerCase().includes(filters.searchText.toLowerCase())
+    })
+    document.querySelector('#fall22').innerHTML = ''
+
+    filterClass.forEach(function (classInfo) {
+        const classInfoElement = document.createElement('p')
+        classInfoElement.textContext = classInfo.title
+        document.querySelector('#fall22').appendChild(classInfoElement)
+    })
+  }
+

@@ -1,11 +1,4 @@
-const showOnPage = function (text) {
-    let newParagraph = document.createElement("p")
-    newParagraph.innerHTML = text
-    let outputDiv = document.getElementById("output")
-    outputDiv.append(newParagraph)
-  }
-   
- 
+
 
 const fall22 = [
   {
@@ -30,30 +23,23 @@ const fall22 = [
   
   
   const dailyHomework =  function (fall22) {
-  classDay  = 1
+  classDay  = 2
   if (classDay === 2) {
       showOnPage('Today is Tuesday. You have in person class. Leave your house by 5:15pm.')
   } else if (classDay === 1) {
-      showOnPage(`Today is ${fall22.dayOfWeek}.You have ${fall22.classTitle} You have ${fall22.homeworkTime} hours of homework.`)
+      showOnPage(`Today is ${fall22[2].dayOfWeek}.You have ${fall22[2].classTitle} You have ${fall22[2].homeworkTime} hours of homework.`)
   } else if (classDay === 3) {
-      showOnPage(`Today is ${fall22.dayOfWeek}.You have ${fall22.classTitle} You have ${fall22.homeworkTime} hours of homework.`)
+      showOnPage(`Today is ${fall22[0].dayOfWeek}.You have ${fall22[0].classTitle} You have ${fall22[0].homeworkTime} hours of homework.`)
   } else {
       showOnPage = 'No homework today! It is a free day!'
   }
   }
   
-  showOnPage(dailyHomework(fall22))
+ dailyHomework(fall22)
   
   
   
-  const loopOverWeekly = function() {
-      fall22.forEach (function(obj) {
-          dailyHomework(obj);
-      })
-  }
-  
-  loopOverWeekly()
-  showOnPage(`Amount of days reviewed was ${fall22.length}`)
+
   
   
   
