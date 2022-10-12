@@ -17,7 +17,7 @@ const showOnPage = function (text) {
     }
     }
 
-    
+
 
 
     document

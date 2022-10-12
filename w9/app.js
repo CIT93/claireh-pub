@@ -40,8 +40,15 @@
  })
 
  document.querySelector("#error").addEventListener('submit', function  (e) {
-  
- })
+  let error = e.target.elements.homework.value
+  let messages = []
+if (error <= 0) {
+  messages.push('Please enter a homework time greater than 0')
+} 
+if (error >= 15) {
+  messages.push('Please enter a homework time less than 15')
+}
+})
 
 
   
